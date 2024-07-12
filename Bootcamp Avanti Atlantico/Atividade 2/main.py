@@ -29,9 +29,17 @@ def LIST_DIFERENCA(list_a:list, list_b:list):
     return resp
             
 #4. Dada uma lista de números inteiros, escreva uma função para encontrar o segundo maior valor na lista.
-
+def SEG_MAIOR(list:list):
+    seg_maior = 0
+    maior = 0
+    for number in list:
+        if number > maior:
+            seg_maior = maior
+            maior = number
+    return seg_maior
+        
 
 lista = [2, 3, 4, 8, 9, 13, 17, 293]
 listaa = [1, 3, 4, 8, 9, 13, 18, 293]
 
-print(LIST_DIFERENCA(lista, listaa))
+print(SEG_MAIOR(listaa))
